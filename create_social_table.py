@@ -8,7 +8,7 @@ def create_social_table():
     dbpwd = os.getenv('DBPASSWD')
     dbname = os.getenv('DBNAME')
 
-    con = mdb.connect('localhost', 'joyinsight', 'san00k', 'insightdata')
+    con = mdb.connect(dbhost, dbusr, dbpwd, dbname)
     with con: 
         cur = con.cursor()    
         cur.execute(
