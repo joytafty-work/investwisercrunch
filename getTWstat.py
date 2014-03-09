@@ -1,6 +1,7 @@
+import requests
+from pattern import web
+
 def getTWstat(twitter_url):
-    import requests
-    from pattern import web
     if ("http" in twitter_url):
         comptw = requests.get(twitter_url)
         if comptw.status_code == 200:
