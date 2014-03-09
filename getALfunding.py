@@ -9,7 +9,6 @@ def getALfunding(CBtag):
 
 def getcompanyData(CBapiwkey):
     r = requests.get(CBapiwkey)
-    print CBapiwkey
     funding_json = []
     if r.status_code == 200:
         funding_json = r.json()
