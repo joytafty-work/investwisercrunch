@@ -8,8 +8,8 @@ def loadfeatures():
 	dbusr = os.getenv('DBUSER')
 	dbpwd = os.getenv('DBPASSWD')
 	dbname = os.getenv('DBNAME')
-    
-    con = mdb.connect(dbhost, dbusr, dbpwd, dbname)
+
+	con = mdb.connect(dbhost, dbusr, dbpwd, dbname)
 
 	with con: 
     	d = pd.io.sql.read_frame('SELECT DISTINCT * FROM founder_seed2A_funds ORDER BY name', con)     
